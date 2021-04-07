@@ -18,6 +18,12 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
+
+# 2021.04.07. ceo@tabspace.kr
+# 파이썬3에서 byte문자가 비정상적으로 호출되던 부분 정상출력되도록 수정
+# 날짜값 표현방식 수정 및 온도표시 등 RCU상황에 맞게끔 코드 변경 및 적용 
+# orangepi zero에서 디바이스를 찾을 수 없는 문제를 i2c_bus 및 i2c_address의 명시로 해결
+
 import time
 
 import Adafruit_GPIO.SPI as SPI
