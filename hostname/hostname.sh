@@ -5,5 +5,5 @@ HOSTNAME=`echo TaS-$(ifconfig eth0|grep ether |awk '{print $2}'|cut -f 4-6 -d':'
 hostnamectl set-hostname ${HOSTNAME}
 
 # 이후에 'crontab -e' 하여 마지막줄에
-# @reboot sleep 30 && /root/hostname.sh
-# 를 추가하여준다. (재부팅시에 TaS만 표기되는 이슈가 있어 sleep 30초 추가)
+# @reboot su - root -c /root/hostname.sh
+# 를 추가하여준다. (su - root -c 가 없을 시에, 재부팅시에 맥어드레드 뒷 6자리 추출에 실패하며, TaS 만 표기됨)
