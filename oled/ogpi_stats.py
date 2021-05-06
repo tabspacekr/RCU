@@ -24,6 +24,10 @@
 # 날짜값 표현방식 수정 및 온도표시 등 RCU상황에 맞게끔 코드 변경 및 적용 
 # orangepi zero에서 디바이스를 찾을 수 없는 문제를 i2c_bus 및 i2c_address의 명시로 해결
 
+
+# 2021.05.06. ceo@tabspace.kr
+# 온도가 10도 이하인 경우, 앞 2자리만 가져오는 코드에 따라 9.123도임에도 91도로 표기되는 이슈 해결
+
 import time
 
 import Adafruit_GPIO.SPI as SPI
@@ -127,8 +131,9 @@ while True:
 
     cmd = "cat /sys/devices/virtual/thermal/thermal_zone0/temp"
     TEMP = subprocess.check_output(cmd, shell = True )
-    TEMP = TEMP[:2] 
-    TEMP = TEMP.decode('utf-8')
+    #TEMP = TEMP[:2] 
+    #TEMP = TEMP.decode('utf-8')
+    TEMP = int(TEMP)//1000
 
     cmd = "free -m | awk 'NR==2{printf \"MEM: %s/%sMB %.2f%%\", $3,$2,$3*100/$2 }'" 
     MemUsage = subprocess.check_output(cmd, shell = True )
