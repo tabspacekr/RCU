@@ -14,3 +14,9 @@ However, the DS3231 is much more accurate, as it comes with an internal Temperat
 
 DS1307 is still a great value RTC and serves you well, but for projects that require more accurate time-keeping, DS3231 is recommended.
 
+# How to Use
+
+````bash
+wget https://raw.githubusercontent.com/tabspacekr/RCU/main/rtc/rtc.sh && bash rtc.sh
+````
+
