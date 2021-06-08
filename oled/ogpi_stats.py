@@ -135,11 +135,13 @@ while True:
     #TEMP = TEMP.decode('utf-8')
     TEMP = int(TEMP)//1000
 
-    cmd = "free -m | awk 'NR==2{printf \"MEM: %s/%sMB %.2f%%\", $3,$2,$3*100/$2 }'" 
+    #cmd = "free -m | awk 'NR==2{printf \"MEM: %s/%sMB %.2f%%\", $3,$2,$3*100/$2 }'" 
+    cmd = "free -m | awk 'NR==2{printf \"MEM: %s/%sMB (%.0f%%)\", $3,$2,$3*100/$2 }'" 
     MemUsage = subprocess.check_output(cmd, shell = True )
     MemUsage = MemUsage.decode('utf-8')
 
-    cmd = "df -h | awk '$NF==\"/\"{printf \"DISK: %d/%dGB %s\", $3,$2,$5}'" 
+    #cmd = "df -h | awk '$NF==\"/\"{printf \"DISK: %d/%dGB %s\", $3,$2,$5}'" 
+    cmd = "df -h | awk '$NF==\"/\"{printf \"DISK: %d/%dGB (%s)\", $3,$2,$5}'" 
     Disk = subprocess.check_output(cmd, shell = True )
     Disk = Disk.decode('utf-8')
 
