@@ -31,3 +31,5 @@ curl -sL "https://raw.githubusercontent.com/Kanga-Who/home-assistant/master/supe
 y
 [info] Replacing /etc/network/interfaces
 [info] Restarting NetworkManager
+
+해당과정에서 mac주소가 변경되어 공유기애서 ip를 재할당받는 이슈 발생
