@@ -4,8 +4,6 @@ TabSpace Room Control Unit Repository
 
 # Contact US
 
-ceo@tabspace.kr
-
 sales@tabspace.kr
 
 https://www.tabspace.kr
