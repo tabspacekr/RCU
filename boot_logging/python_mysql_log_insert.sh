@@ -15,6 +15,7 @@ cursor.execute(sql)
 grow_db.commit()
 #======= power_on.py code end ======
 
+#시스템 부팅시에 네트워크 연결 확인 후 db에 로그 insert
 sudo nano /lib/systemd/system/power_on.service
 #======= power_on.service code start ======
 [Unit]
