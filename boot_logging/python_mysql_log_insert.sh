@@ -1,4 +1,5 @@
-sudo nano /root/power_on.py
+#power on python code create
+#sudo nano /root/power_on.py
 #======= power_on.py code start ======
 import pymysql
 
