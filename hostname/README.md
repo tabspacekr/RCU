@@ -18,3 +18,9 @@
 6. (마지막줄에) @reboot su - root -c /root/hostname.sh (추가)
 
 7. reboot
+
+# 유의사항
+
+1. 재부팅을 이후에 Hostname 변경이 적용되므로, 재부팅 요망
+
+2. crontab에서 @reboot su - root -c 를 하지 않을 경우, mac주소를 정상적으로 호출해오지 못함
