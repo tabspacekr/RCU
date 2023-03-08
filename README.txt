@@ -7,3 +7,4 @@ TabSpace Room Control Unit Repository
 
 mail: ceo(a)tabspace.kr
 homepage: https://www.tabspace.kr
+blog: https://blog.naver.com/tabspacekr
